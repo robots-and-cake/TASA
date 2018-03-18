@@ -1,0 +1,11 @@
+title: TASA
+description: The Todmorden Space and Aeronautical Administration
+
+github: [metadata]
+encoding: UTF-8
+# Build settings
+markdown: kramdown
+theme: jekyll-theme-cayman
+highlighter: rouge
+kramdown:
+ input: GFM

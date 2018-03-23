@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0" name="viewport">
+    <title>{{site.title}}</title>
+    <style type="text/css">
+    {% capture style %} {% include main.scss %} {% endcapture %}
+    {{style | scssify }}
+    </style>
+    <!--rich data-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="{{site.twitter}}">
+    <meta name="twitter:title" content="{{site.title}}">
+    <meta name="twitter:description" content="{{site.description}}">
+    <meta name="twitter:image" content="{{site.logo}}">
+    <meta name="description" value="{{site.description}}">
+    <meta property="og:title" content="{{site.title}}">
+    <meta property="og:site_name" content="{{site.title}}">
+    <meta property="og:description" content="{{site.description}}">
+    <meta property="og:image" content="{{site.logo}}">
+    <link rel="icon" sizes="192x192" href="{{site.favicon-192}}">
+    <link rel="shortcut icon" href="{{site.favicon}}">
+    <link rel="apple-touch-icon" href="{{site.apple-touch-icon}}">
+    <meta name="msapplication-TileImage" content="{{site.tile}}">
+    <meta name="msapplication-tap-highlight" content="no">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="{{page.category}}">
+    <a class="landmark" href="#content">skip to main content</a>
+    <div class="container">
+        <nav class="drawer initial" id="sidebar" role="menu">
+            <ul class="menu list">
+                {%- for page in site.pages -%}
+                <li><a href="{{page.url}}">{{page.title}}</a></li>
+                {% endfor %}
+            </ul>
+            <hr />
+            <ul class="menu list">
+                {%- for post in site.posts -%}
+                <li><a href="{{post.url}}">{{post.title}}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+        <div class="wrapper" id="push">
+            <header class="site">
+                <h1><button type="button" class="icon button" title="menu" aria-controls="sidebar"><i class="material-icons">menu</i></button>
+	<a href="/">{{site.title}}</a> 
+	</h1>
+            </header>
+            <main id="content">
+                {{content}}
+            </main>
+            <footer>
+                <p>Site by <a href="//limograf.com">Limograf</a>.</p>
+            </footer>
+        </div>
+    </div>
+    <script>
+        var drawer = document.querySelector('.drawer'); 
+        var button = document.querySelector('.button'); 
+        button.onclick = function() { drawer.classList.toggle('toggle'); }
+    </script>
+</body>
+
+</html>

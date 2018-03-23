@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<article class="post">
+    <header>
+        <h2><i class="material-icons">chevron_right</i> {{page.title}}</h2>
+        <time>{{page.date}}</time>
+    </header>
+    <section>
+        {{ content }}
+    </section>
+    <footer>
+        <nav>
+            <a class="older" href="{{ page.previous.url }}"><i class="material-icons">chevron_left</i> {{ page.previous.title }}</a>
+                <a class="newer" href="{{ page.next.url }}">{{ page.next.title }} <i class="material-icons">chevron_right</i></a>
+        </nav>
+    </footer>
+</article>

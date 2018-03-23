@@ -1,0 +1,37 @@
+//GLOBALS is all the elements and class styles that are reusable
+// go to theme to change the colours
+// go to layout to move stuff on the page around
+
+body, html { background: $background; color: $foreground; font-family: $mono}
+
+//links
+a, a:link { color: $brand; text-decoration: none }
+#sidebar a, #sidebar a:link, button:active { color: $primary; }
+
+// buttons
+button {
+    background: none;
+    border: none;
+    color: $brand
+}
+
+// menus, navs
+.menu {list-style: none;}
+.post nav {display:flex; justify-content: space-between}
+
+//countdown - big text
+.countdown {
+    font-size: 12vw;
+}
+
+//offscreen
+@mixin offscreen {
+    position: absolute;
+    margin-left: -999em;
+    font-size: 0;
+    opacity: 0;
+}
+
+.landmark {
+    @include offscreen;
+}

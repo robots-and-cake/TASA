@@ -17,7 +17,7 @@ $tertiary: #75715e; // light grey
 
 // mixins
 @mixin invert {
-	background: $foreground;
+	background-color: $foreground;
 	color: $background;
 }
 

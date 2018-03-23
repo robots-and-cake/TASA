@@ -26,6 +26,7 @@ h1 button {
     background-repeat: no-repeat;
     background-size: 30vh;
     background-position: bottom}
+#sidebar .menu {padding-top:calc(10vh + 4.2rem);}
 
 //main
 #push { padding:1rem; display:flex; flex-direction:column; justify-content:space-between; min-height:99vh}

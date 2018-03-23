@@ -33,12 +33,6 @@
     <div class="container">
         <nav class="drawer initial" id="sidebar" role="menu">
             <ul class="menu list">
-                {%- for page in site.pages -%}
-                <li><a href="{{page.url}}">{{page.title}}</a></li>
-                {% endfor %}
-            </ul>
-            <hr />
-            <ul class="menu list">
                 {%- for post in site.posts -%}
                 <li><a href="{{post.url}}">{{post.title}}</a></li>
                 {% endfor %}

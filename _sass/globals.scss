@@ -5,8 +5,10 @@
 body, html { background: $background; color: $foreground; font-family: $mono}
 
 //links
-a, a:link { color: $brand; text-decoration: none }
+a, a:link, h1 a:visited { color: $brand; text-decoration: none }
 #sidebar a, #sidebar a:link, button:active { color: $primary; }
+a:active { color:$highlight }
+a:visited { color:$secondary }
 
 // buttons
 button {

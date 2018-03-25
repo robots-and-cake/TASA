@@ -22,9 +22,10 @@ button {
 .post nav {display:flex; justify-content: space-between}
 
 //countdown - big text
-.countdown {
-    font-size: 12vw;
+#timer {
+    font-size: 20vh;
 }
+
 
 //offscreen
 @mixin offscreen {

@@ -9,9 +9,6 @@ layout: default
 </div>
 {% endfor %}
 
-<time class="countdown"> 
-<span class="day">{{ "now" | date: "%d" }}</span>
-<span class="month">{{ "now" | date: "%B" }} </span>
-<span class="year">{{ "now" | date: "%Y" }} </span>
-</time>
+<h3 class="landmark">Countdown to Launch</h3>
+{% include countdown_timer.html %}
 

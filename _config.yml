@@ -7,7 +7,8 @@ email: admin@tasa.space
 description: >- # this means to ignore newlines until "baseurl:"
   This is the website for the Todmorden Aeronautical Space Administration (TASA), who are going to put a payload into space and take a picture of the character of the Earth and return the payload to earth in 50 days.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://tasa.space" 
+url: ""
+# url: "http://tasa.space" 
 logo: ../assets/logo.png 
 permalink: none
 sass:

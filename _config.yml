@@ -9,20 +9,32 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: ""
 # url: "http://tasa.space" 
-logo: ../assets/logo.png 
+logo: ../assets/pics/logo.png 
 permalink: none
 sass:
  sass_dir: _sass
  style: :compressed
+
+future: false
+timezone: Europe/London
 
 # Build settings
 markdown: kramdown
 plugins:
   - jekyll-feed
 
+# Collections
+collections:
+  crew:
+    output: true
+#    permalink: /crew/:path/
+
+defaults:
+  - scope:
+      path: "assets/pics"
+    values:
+      image: true
 # Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
 # exclude:
 #   - Gemfile
 #   - Gemfile.lock
